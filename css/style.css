@@ -11902,6 +11902,11 @@ a:visited {
   font-weight: bold;
   color: rgba(14, 128, 221, 0.834);
 }
+@media (min-width: 375px) and (max-width: 778px) {
+  .info-basica {
+    margin-bottom: 5rem;
+  }
+}
 
 .pie-pagina {
   display: flex;
@@ -11928,7 +11933,7 @@ a:visited {
   color: none;
 }
 @media (min-width: 375px) and (max-width: 778px) {
-  .pie-pagina .pie-pagina-properties {
+  .pie-pagina {
     justify-content: space-around;
     align-content: center;
     list-style: none;
