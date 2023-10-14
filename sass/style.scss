@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import "variables"; // Importa el archivo variables.scss
+@import "mixins"; // Importa el archivo mixins.scss
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+body {
+  @include body-style; // se importa desde la estructura desde mixins
+}
+
+.foto-perfil {
+  @include foto-perfil-properties; // se importa la esctura de mixins las propiedades que tomara la foto
+}
+
+.menu {
+  @include menu-properties; // se importa la esctura de mixins las propiedades que toma el menu
+}
+
+a:visited {
+  @include link-visited-properties; // se importa la esctura de mixins las propiedades que toma  los link cuando estan visitados
+}
+
+.info-basica {
+  @include info-basica-properties; // se importa propiedades
+}
+
+.pie-pagina {
+  @include pie-pagina-properties; // se importa propiedades
+}
+
+.imagenen-logo-corporativo {
+  @include imagenen-logo-corporativo-properties; // se importa propiedades
+}
+
+.imagenen-logo-estudios {
+  @include imagenen-logo-estudios-properties;
+}
+
+
+.card{
+  @include card-properties; 
+}
+
+.titulo-mis-experiencias-profesionales {
+  @include titulo-mis-experiencias-profesionales-properties;
+}
+
+
+.empresas{
+ @include empresas-properties;
+}
+
+.navebar-paginacion{
+  @include navbar-empresas-properties
+}
+
+.experiencia-texto {
+  @include experiencia-texto-properties;
+}
+
+
+
+.Mis-Titulos-Obtenidos {
+  @include Mis-Titulos-Obtenidos-properties;
+}
+
+.Titulo-Evidencias {
+  @include Titulo-Evidencias-properties;
+}
+
+.imagenen-logo-github {
+  @include imagenen-logo-github-properties;
+}
+
+.imagenen-freetime {
+ @include imagen-freetime-properties;
+}
+
+@media (min-width: 600px) and (max-width: 768px) {
+ @include properties-responsives-600-to-768;
+}
+
