@@ -23,6 +23,7 @@ a:visited {
   @include info-basica-properties; // se importa propiedades
 }
 
+
 .pie-pagina {
   @include pie-pagina-properties; // se importa propiedades
 }
@@ -43,6 +44,16 @@ a:visited {
 .titulo-mis-experiencias-profesionales {
   @include titulo-mis-experiencias-profesionales-properties;
 }
+
+
+.footer-subexperiencia{
+ @include navegador-subexperiencias-properties;
+}
+
+.footerDos-experiencia{
+  @include navegador-experiencias-properties ;
+}
+
 
 
 .empresas{
