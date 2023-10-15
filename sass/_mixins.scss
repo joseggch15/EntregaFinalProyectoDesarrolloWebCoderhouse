@@ -124,9 +124,11 @@
     height: 18.75rem;
     margin: 1rem;
   }
- @media (min-width: 375px) and (max-width: 778px) {
+  @media (min-width: 375px) and (max-width: 778px) {
     .empresas {
-     margin: 0.3 rem;
+      
+      margin-bottom: 1rem;
+      margin-top: 2rem;
     }
   }
 }
@@ -173,9 +175,13 @@
   position: relative;
   transform: translateX(30%);
   @media (min-width: 375px) and (max-width: 778px) {
-    font-size: 2rem;
-    align-items: center;
-    transform: translateX(20%);
+    font-size: medium;
+    position: absolute;
+    transform: translateX(0.1%);
+
+    margin-left: 5rem;
+
+   
   }
 }
 
@@ -191,13 +197,14 @@
   text-align: center;
   margin-right: 40%;
 
-  /* @media (min-width: 375px) and (max-width: 778px) {
+  @media (min-width: 375px) and (max-width: 778px) {
     align-items: center;
     align-content: center;
     text-align: center;
-    margin-left: 100px;
-    margin-bottom: 1000px;;
-  }*/
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 5rem;
+  }
 }
 
 @mixin navegador-experiencias-properties {
@@ -211,8 +218,9 @@
     align-items: center;
     align-content: center;
     text-align: center;
-    width: 100%;
-   
+    width: 97%;
+    margin-top: 1rem;
+    margin-bottom: 5rem;
   }
 }
 
@@ -222,8 +230,12 @@
 }
 
 @mixin Titulo-Evidencias-properties {
-  margin-left: 8rem;
-  
+  position: relative;
+  transform: translateX(45%);
+  @media (min-width: 375px) and (max-width: 778px) {
+    position: absolute;
+    margin-left: 4rem;
+  }
 }
 
 @mixin card-properties {
@@ -235,15 +247,15 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  
 
   @media (min-width: 375px) and (max-width: 778px) {
     flex-direction: column;
     .github {
       width: 300px;
       height: 200px;
-     margin-bottom: 2rem;
+      margin-bottom: 2rem;
       size: 100%;
+      margin-top: 2rem;
     }
     .github-link {
       text-align: center; /* Centrar horizontalmente */

@@ -11980,7 +11980,8 @@ a:visited {
 }
 @media (min-width: 375px) and (max-width: 778px) {
   .imagenen-logo-corporativo .empresas {
-    margin: 0.3 rem;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
   }
 }
 
@@ -12020,9 +12021,10 @@ a:visited {
 }
 @media (min-width: 375px) and (max-width: 778px) {
   .titulo-mis-experiencias-profesionales {
-    font-size: 2rem;
-    align-items: center;
-    transform: translateX(20%);
+    font-size: medium;
+    position: absolute;
+    transform: translateX(0.1%);
+    margin-left: 5rem;
   }
 }
 
@@ -12031,13 +12033,16 @@ a:visited {
   align-content: center;
   text-align: center;
   margin-right: 40%;
-  /* @media (min-width: 375px) and (max-width: 778px) {
+}
+@media (min-width: 375px) and (max-width: 778px) {
+  .footer-subexperiencia {
     align-items: center;
     align-content: center;
     text-align: center;
-    margin-left: 100px;
-    margin-bottom: 1000px;;
-  }*/
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 5rem;
+  }
 }
 
 .footerDos-experiencia {
@@ -12052,7 +12057,9 @@ a:visited {
     align-items: center;
     align-content: center;
     text-align: center;
-    width: 100%;
+    width: 97%;
+    margin-top: 1rem;
+    margin-bottom: 5rem;
   }
 }
 
@@ -12083,7 +12090,14 @@ a:visited {
 }
 
 .Titulo-Evidencias {
-  margin-left: 8rem;
+  position: relative;
+  transform: translateX(45%);
+}
+@media (min-width: 375px) and (max-width: 778px) {
+  .Titulo-Evidencias {
+    position: absolute;
+    margin-left: 4rem;
+  }
 }
 
 .imagenen-logo-github {
@@ -12101,6 +12115,7 @@ a:visited {
     height: 200px;
     margin-bottom: 2rem;
     size: 100%;
+    margin-top: 2rem;
   }
   .imagenen-logo-github .github-link {
     text-align: center; /* Centrar horizontalmente */
