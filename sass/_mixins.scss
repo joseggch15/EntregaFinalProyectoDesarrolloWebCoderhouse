@@ -227,7 +227,24 @@
 @mixin Mis-Titulos-Obtenidos-properties {
   position: relative;
   transform: translateX(40%);
+
+  @media (min-width: 375px) and (max-width: 778px) {
+    position: relative;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    transform: translateX(-1%);
+
+  }
 }
+
+@mixin card-properties {
+  background-color: transparent;
+  @media (min-width: 375px) and (max-width: 778px) {
+    margin-bottom: 4.5rem;
+    }
+}
+
 
 @mixin Titulo-Evidencias-properties {
   position: relative;
@@ -238,9 +255,7 @@
   }
 }
 
-@mixin card-properties {
-  background-color: transparent;
-}
+
 
 @mixin imagenen-logo-github-properties {
   display: flex;

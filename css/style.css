@@ -12014,6 +12014,11 @@ a:visited {
 .card {
   background-color: transparent;
 }
+@media (min-width: 375px) and (max-width: 778px) {
+  .card {
+    margin-bottom: 4.5rem;
+  }
+}
 
 .titulo-mis-experiencias-profesionales {
   position: relative;
@@ -12087,6 +12092,15 @@ a:visited {
 .Mis-Titulos-Obtenidos {
   position: relative;
   transform: translateX(40%);
+}
+@media (min-width: 375px) and (max-width: 778px) {
+  .Mis-Titulos-Obtenidos {
+    position: relative;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    transform: translateX(-1%);
+  }
 }
 
 .Titulo-Evidencias {
