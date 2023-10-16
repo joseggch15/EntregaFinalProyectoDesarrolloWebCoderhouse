@@ -1,4 +1,165 @@
 // se da bloques de codigo para luego ser reutilizado en style sass y compactar el codigo
+/* Reset */
+
+@mixin reset-box-model() {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@mixin body-hobbies() {
+  background: #fff;
+  font-family: "Open Sans";
+  font-size: 16px;
+}
+
+/* Contenedor */
+@mixin contenedor {
+  overflow: visible;
+}
+
+/* Acerca de */
+@mixin acerca-de {
+  text-align: center;
+}
+
+/* Foto */
+@mixin foto {
+  margin-top: -60px;
+  
+  img {
+    vertical-align: top;
+    border-radius: 50%;
+    border: 5px solid rgba(255, 255, 255, 0.2);
+    
+    &:hover {
+      transform: scale(1.5);
+      transition: all 1s ease;
+    }
+  }
+}
+
+/* Texto */
+@mixin texto {
+  color: #5a5a5a;
+  font-weight: 600;
+  font-size: 1.08em;
+  line-height: 30px;
+  width: 80%;
+  margin: 40px auto 60px auto;
+  
+  .titulo {
+    font-size: 34px;
+    line-height: 34px;
+    margin-bottom: 40px;
+    font-weight: 300;
+    color: #dd820d;
+    text-align: center;
+  }
+  
+  .bold {
+    color: #3895ea;
+    text-decoration: underline;
+  }
+}
+
+/* Hobbies */
+@mixin hobbies {
+  background: #f2f2f2;
+  padding: 60px 0;
+  
+  .contenedor {
+    overflow: hidden;
+    
+    .titulo {
+      font-size: 34px;
+      line-height: 34px;
+      margin-bottom: 40px;
+      font-weight: 300;
+      color: #323068;
+      text-align: center;
+    }
+    
+    .contenedor-hobbies {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      
+      .hobbie {
+        width: 23%;
+        margin-bottom: 40px;
+        
+        .thumb {
+          width: 100%;
+          margin-bottom: 19px;
+          
+          img {
+            width: 100%;
+            vertical-align: top;
+            border-radius: 3px;
+            
+            &:hover {
+              transform: scale(1.05);
+              transition: all 0.5s ease;
+            }
+          }
+        }
+        
+        .descripcion {
+          text-align: center;
+          
+          .nombre {
+            font-weight: 700;
+            color: #3895ea;
+            margin-bottom: 10px;
+          }
+          
+          .categoria {
+            font-size: 14px;
+            color: #636363;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+// Mixin para estilos de .main .hobbies .contenedor-hobbies .hobbie en pantalla <= 800px
+@mixin screen-max-800 {
+  @media screen and (max-width: 800px) {
+    .main .hobbies .contenedor-hobbies .hobbie {
+      width: 46%;
+    }
+  }
+}
+
+// Mixin para estilos de .foto .foto-jarron en pantalla <= 600px
+@mixin screen-max-600 {
+  @media screen and (max-width: 600px) {
+    .foto .foto-jarron {
+      margin-top: 5rem;
+      width: 15.25rem;
+      height: 15.25rem;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
 
 @mixin body-style {
   background-image: url("../img/pexels-tranmautritam-245032.jpg");
@@ -7,11 +168,238 @@
   background-attachment: fixed;
   margin: 0;
   padding: 0;
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto", "sans-serif", "Poppins";
   overflow-x: hidden;
+
+  /*  background: #fff; */
+  font-family: "Open Sans";
+  font-size: 16px;
+
+  html,
+  body {
+    font-family: "Poppins", sans-serif;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+  h4 {
+    font-size: 1.5rem;
+  }
+  h5 {
+    font-size: 1.25rem;
+  }
+  h6 {
+    font-size: 1rem;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    text-transform: uppercase;
+    font-weight: 900;
+  }
+
+  p {
+    font-size: 1rem;
+    margin: 10px 0;
+    line-height: 1.7em;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
   @media (min-width: 375px) and (max-width: 778px) {
     overflow-x: hidden;
   }
+
+  @media (min-width: 779px) and (max-width: 1024px) {
+    overflow-x: hidden;
+  }
+}
+
+@mixin container-properties {
+  margin: auto;
+  max-width: 1300px;
+  overflow: auto;
+  padding: 0 20px;
+}
+
+// Define un mixin para el fondo y el padding del elemento #about
+@mixin about-styles {
+  background: #f8f9fa;
+  padding: 90px 0;
+}
+
+// Define un mixin para los estilos del encabezado h2 dentro de #about
+@mixin about-h2-styles {
+  padding-bottom: 50px;
+}
+
+// Define un mixin para los estilos de la clase .about-row
+@mixin about-row-styles {
+  display: flex;
+}
+
+// Define un mixin para los estilos de la imagen dentro de .about-row-image
+
+@mixin about-row-image-styles {
+  img {
+    height: 500px;
+    padding-right: 90px;
+  }
+}
+
+@mixin about-hr-styles {
+  width: 60%;
+  margin-bottom: 30px;
+}
+
+// Define un mixin para los estilos del elemento #skills
+@mixin skills-styles {
+  padding: 90px 0;
+}
+
+// Define un mixin para los estilos del encabezado h2 dentro de #skills
+@mixin skills-h2-styles {
+  padding-bottom: 50px;
+}
+
+// Define un mixin para los estilos de la clase .skills-row
+@mixin skills-row-styles {
+  display: flex;
+  padding-bottom: 50px;
+}
+
+// Define un mixin para los estilos de las clases .skills-row-left y .skills-row-right
+@mixin skills-row-left-right-styles {
+  width: 50%;
+  display: flex;
+}
+
+// Define un mixin para los estilos de las clases .skills-row-left-image y .skills-row-right-image
+@mixin skills-row-image-styles {
+  width: 50%;
+  text-align: right;
+  padding-right: 50px;
+
+  img {
+    height: 100px;
+  }
+}
+
+// Define un mixin para los estilos del elemento #timeline
+@mixin timeline-styles {
+  padding: 90px 0;
+  background: #f8f9fa;
+}
+
+// Define un mixin para los estilos del encabezado h2 dentro de #timeline
+@mixin timeline-h2-styles {
+  padding-bottom: 20px;
+}
+
+// Define un mixin para los estilos de la clase .timeline-row
+@mixin timeline-row-styles {
+  display: flex;
+  padding-bottom: 40px;
+}
+
+// Define un mixin para los estilos de la clase .timeline-row-tag
+@mixin timeline-row-tag-styles {
+  width: 50%;
+  text-align: right;
+  padding-right: 80px;
+
+  p span {
+    background: #c4c4c4;
+    color: #fff;
+    padding: 12px 30px;
+    border-radius: 20px;
+  }
+}
+
+// index dimension mobile
+/* Utility Classes */
+@mixin display-1 {
+  font-size: 4rem;
+}
+
+/* About */
+#about {
+  padding: 50px 0;
+  text-align: center;
+}
+
+#about h2 {
+  padding-bottom: 30px;
+}
+
+.about-row {
+  flex-wrap: wrap;
+}
+
+.about-row-image img {
+  height: auto;
+  width: 100%;
+  padding-right: 10px;
+  padding-bottom: 30px;
+}
+
+#about hr {
+  width: 100%;
+}
+
+/* Skills */
+#skills {
+  padding: 50px 0;
+  text-align: center;
+}
+
+#skills h2 {
+  padding-bottom: 30px;
+}
+
+.skills-row-left-image,
+.skills-row-right-image {
+  padding-right: 20px;
+}
+
+.skills-row-left-image img,
+.skills-row-right-image img {
+  height: 60px;
+}
+
+.skills-row-left-text h4,
+.skills-row-right-text h4 {
+  font-size: 16px;
+}
+
+.skills-row-left-text p,
+.skills-row-right-text p {
+  text-align: left;
+}
+
+/* Timeline */
+#timeline {
+  padding: 50px 0;
+  text-align: center;
+}
+
+#timeline h2 {
+  padding-bottom: 30px;
+}
+
+@mixin large-properties {
+  font-size: 1.25rem;
 }
 
 @mixin foto-perfil-properties {
@@ -126,7 +514,6 @@
   }
   @media (min-width: 375px) and (max-width: 778px) {
     .empresas {
-      
       margin-bottom: 1rem;
       margin-top: 2rem;
     }
@@ -180,8 +567,6 @@
     transform: translateX(0.1%);
 
     margin-left: 5rem;
-
-   
   }
 }
 
@@ -234,7 +619,6 @@
     align-content: center;
     text-align: center;
     transform: translateX(-1%);
-
   }
 }
 
@@ -242,9 +626,8 @@
   background-color: transparent;
   @media (min-width: 375px) and (max-width: 778px) {
     margin-bottom: 4.5rem;
-    }
+  }
 }
-
 
 @mixin Titulo-Evidencias-properties {
   position: relative;
@@ -255,6 +638,50 @@
   }
 }
 
+
+/* Portfolio */
+@mixin portfolio-styles {
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 40px;
+  width: 100%;
+
+  .portfolio-nav {
+    display: table;
+    margin: 0 auto;
+    padding-bottom: 20px;
+
+    ul {
+      list-style: none;
+      float: right;
+
+      li {
+        float: left;
+
+        a {
+          display: block;
+          padding: 20px;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .box {
+    float: left;
+    width: 33.3%;
+    padding: 10px;
+
+    img {
+      width: 100%;
+      height: 8rem;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
 
 
 @mixin imagenen-logo-github-properties {
@@ -330,6 +757,18 @@
   }
 }
 
+@mixin container() {
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+  overflow: hidden;
+}
+
+@mixin photo-jar() {
+  width: 31.25rem;
+  height: 31.25rem;
+}
+
 @mixin properties-responsives-600-to-768 {
   .info-basica {
     color: $texto-blue;
@@ -338,6 +777,7 @@
     padding: 1%;
     position: relative;
     transform: translateY(-40%);
+    padding-top: 20rem;
 
     p::first-line {
       font-weight: bold;
@@ -346,8 +786,7 @@
   }
 
   .foto-perfil {
-    transform: translateX(-50%);
-    transform: translateY(-70%);
+    transform: translateY(0%);
   }
 
   .menu {
