@@ -30,6 +30,19 @@ body {
   }
 }
 
+.experience{
+  @include experience-properties();
+}
+
+.degree{
+  @include degree-properties();
+}
+
+
+.evidence{
+  @include evidence-properties
+}
+
 
 
 /* Ahora puedes utilizar los mixins en tu código */
@@ -61,16 +74,6 @@ body {
 // Utiliza los mixins según sea necesario
 @include screen-max-800; // Aplica estilos en pantalla <= 800px
 @include screen-max-600; // Aplica estilos en pantalla <= 600px
-
-
-
-
-
-
-
-
-
-
 
 
 .foto-perfil {
@@ -279,9 +282,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 // Estilos para el elemento con el ID "redes"
-#redes {
+#redes-repositorio {
     text-align: center;
-    color: white;
+    color: $background-color;
     font-size: 20px;
     margin: 15px auto;
 
@@ -310,6 +313,9 @@ h1, h2, h3, h4, h5, h6 {
         text-align: center;
         justify-content: center;
         margin: auto;
+        background-color: $color-box;
+        border-radius: 10rem;
+        
     }
 }
 

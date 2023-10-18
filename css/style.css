@@ -12022,6 +12022,24 @@ body a {
   height: 31.25rem;
 }
 
+.experience {
+  background-image: url("../img/experience.png");
+  width: auto;
+  height: 100%;
+}
+
+.degree {
+  background-image: url("../img/backgroundDegree.png");
+  width: auto;
+  height: 100%;
+}
+
+.evidence {
+  background-image: url("../img/backgroundEvidence.png");
+  width: auto;
+  height: 100%;
+}
+
 /* Ahora puedes utilizar los mixins en tu código */
 .main .contenedor {
   overflow: visible;
@@ -12293,6 +12311,9 @@ a:visited {
 
 .about-row {
   display: flex;
+}
+.about-row p {
+  text-align: justify;
 }
 
 .about-row-image img {
@@ -12615,13 +12636,13 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   padding: 0;
 }
 
-#redes {
+#redes-repositorio {
   text-align: center;
-  color: white;
+  color: #090f1b;
   font-size: 20px;
   margin: 15px auto;
 }
-#redes h1, #redes .h1 {
+#redes-repositorio h1, #redes-repositorio .h1 {
   background: rgba(0, 2, 1, 0.178);
   text-align: center;
   justify-content: center;
@@ -12642,6 +12663,8 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   text-align: center;
   justify-content: center;
   margin: auto;
+  background-color: rgb(39, 58, 71);
+  border-radius: 10rem;
 }
 
 .github-info {

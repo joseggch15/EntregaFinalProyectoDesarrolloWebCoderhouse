@@ -42,6 +42,27 @@
   }
 }
 
+@mixin experience-properties{
+  background-image: url("../img/experience.png"); 
+  width: auto;
+  height: 100%;
+}
+
+@mixin degree-properties{
+   background-image: url("../img/backgroundDegree.png");
+   width: auto;
+   height: 100%;
+}
+
+@mixin evidence-properties{
+  background-image: url("../img/backgroundEvidence.png");
+  width: auto;
+  height: 100%; 
+  
+}
+
+
+
 /* Texto */
 @mixin texto {
   color: #5a5a5a;
@@ -233,6 +254,10 @@
   padding: 0 20px;
 }
 
+
+
+
+
 // Define un mixin para el fondo y el padding del elemento #about
 @mixin about-styles {
   background: #f8f9fa;
@@ -247,6 +272,9 @@
 // Define un mixin para los estilos de la clase .about-row
 @mixin about-row-styles {
   display: flex;
+  p{
+    text-align: justify;
+  }
 }
 
 // Define un mixin para los estilos de la imagen dentro de .about-row-image
