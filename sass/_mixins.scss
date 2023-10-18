@@ -172,16 +172,6 @@
 }
 
 
-
-
-
-
-
-
-
-
-
-
 @mixin body-style {
   background-image: url("../img/pexels-tranmautritam-245032.jpg");
   background-size: cover;
@@ -253,9 +243,6 @@
   overflow: auto;
   padding: 0 20px;
 }
-
-
-
 
 
 // Define un mixin para el fondo y el padding del elemento #about
@@ -608,7 +595,7 @@
   align-items: center;
   align-content: center;
   text-align: center;
-  margin-right: 40%;
+  margin-right: 20rem;
 
   @media (min-width: 375px) and (max-width: 778px) {
     align-items: center;
@@ -617,6 +604,10 @@
     width: 100%;
     margin-top: 1rem;
     margin-bottom: 5rem;
+    .pagination a {
+      font-size: .3rem; /* Ajusta el tamaño de letra según tus necesidades */
+    }
+    
   }
 }
 
@@ -626,7 +617,7 @@
   text-align: center;
   margin-right: 40%;
   margin-top: 5rem;
-
+  margin-right: 20rem;
   @media (min-width: 375px) and (max-width: 778px) {
     align-items: center;
     align-content: center;
@@ -634,6 +625,9 @@
     width: 97%;
     margin-top: 1rem;
     margin-bottom: 5rem;
+     .pagination a {
+      font-size: .3rem; /* Ajusta el tamaño de letra según tus necesidades */
+    }
   }
 }
 

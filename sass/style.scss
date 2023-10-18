@@ -281,7 +281,7 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0;
 }
 
-// Estilos para el elemento con el ID "redes"
+// Estilos para el elemento con el ID "redes-repositorio github"
 #redes-repositorio {
     text-align: center;
     color: $background-color;
@@ -315,6 +315,7 @@ h1, h2, h3, h4, h5, h6 {
         margin: auto;
         background-color: $color-box;
         border-radius: 10rem;
+        width: 20rem;
         
     }
 }
