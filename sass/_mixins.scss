@@ -317,6 +317,15 @@
 @mixin about-styles {
   background: #f8f9fa;
   padding: 90px 0;
+  img{
+    margin-left: 17rem;
+  }
+  @media (min-width: 375px) and (max-width: 778px) {
+    img{
+      margin-left: 3rem;
+    }
+  }
+
 }
 
 // Define un mixin para los estilos del encabezado h2 dentro de #about

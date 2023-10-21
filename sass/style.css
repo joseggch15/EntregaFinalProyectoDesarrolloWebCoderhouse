@@ -12502,6 +12502,14 @@ a:visited {
   background: #f8f9fa;
   padding: 90px 0;
 }
+#about img {
+  margin-left: 17rem;
+}
+@media (min-width: 375px) and (max-width: 778px) {
+  #about img {
+    margin-left: 3rem;
+  }
+}
 
 #about h2, #about .h2 {
   padding-bottom: 50px;
