@@ -12008,8 +12008,83 @@ body a {
   background: #fff;
   font-family: "Open Sans";
   font-size: 16px;
+  background: #f2f2f2;
+  padding: 0px 0px 60px 0px;
+}
+.body-hobbies .foto-jarron {
+  margin-top: 5rem;
+}
+.body-hobbies .contenedor {
+  overflow: hidden;
+}
+.body-hobbies .contenedor .titulo {
+  font-size: 34px;
+  line-height: 34px;
+  margin-bottom: 40px;
+  font-weight: 300;
+  color: #323068;
+  text-align: center;
+}
+.body-hobbies .contenedor .contenedor-hobbies {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.body-hobbies .contenedor .contenedor-hobbies .hobbie {
+  width: 23%;
+  margin-bottom: 40px;
+}
+.body-hobbies .contenedor .contenedor-hobbies .hobbie .thumb {
+  width: 100%;
+  margin-bottom: 19px;
+}
+.body-hobbies .contenedor .contenedor-hobbies .hobbie .thumb img {
+  width: 100%;
+  vertical-align: top;
+  border-radius: 3px;
+}
+.body-hobbies .contenedor .contenedor-hobbies .hobbie .thumb img:hover {
+  transform: scale(1.05);
+  transition: all 0.5s ease;
+}
+.body-hobbies .contenedor .contenedor-hobbies .hobbie .descripcion {
+  text-align: center;
+}
+.body-hobbies .contenedor .contenedor-hobbies .hobbie .descripcion .nombre {
+  font-weight: 700;
+  color: #3895ea;
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+.body-hobbies .contenedor .contenedor-hobbies .hobbie .descripcion .categoria {
+  font-size: 14px;
+  color: #636363;
+}
+@media screen and (max-width: 800px) {
+  .body-hobbies .main .hobbies .contenedor-hobbies .hobbie {
+    width: 46%;
+    height: auto;
+  }
+  .body-hobbies .main .hobbies .contenedor-hobbies .hobbie .hobbies {
+    display: flex;
+    flex-direction: column;
+  }
+  .body-hobbies .main .hobbies .contenedor-hobbies .hobbie .nombre {
+    font-weight: 700;
+    color: #3895ea;
+    margin-bottom: 10px;
+    font-size: 1rem;
+  }
+  .body-hobbies .main .hobbies .contenedor-hobbies .hobbie .categoria {
+    font-size: 0.5rem;
+    color: #636363;
+  }
 }
 
+/*.main .hobbies {
+
+}*/
 .contenedor {
   width: 90%;
   max-width: 1000px;
@@ -12108,62 +12183,6 @@ body a {
   text-decoration: underline;
 }
 
-.main .hobbies {
-  background: #f2f2f2;
-  padding: 60px 0;
-}
-.main .hobbies .contenedor {
-  overflow: hidden;
-}
-.main .hobbies .contenedor .titulo {
-  font-size: 34px;
-  line-height: 34px;
-  margin-bottom: 40px;
-  font-weight: 300;
-  color: #323068;
-  text-align: center;
-}
-.main .hobbies .contenedor .contenedor-hobbies {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-.main .hobbies .contenedor .contenedor-hobbies .hobbie {
-  width: 23%;
-  margin-bottom: 40px;
-}
-.main .hobbies .contenedor .contenedor-hobbies .hobbie .thumb {
-  width: 100%;
-  margin-bottom: 19px;
-}
-.main .hobbies .contenedor .contenedor-hobbies .hobbie .thumb img {
-  width: 100%;
-  vertical-align: top;
-  border-radius: 3px;
-}
-.main .hobbies .contenedor .contenedor-hobbies .hobbie .thumb img:hover {
-  transform: scale(1.05);
-  transition: all 0.5s ease;
-}
-.main .hobbies .contenedor .contenedor-hobbies .hobbie .descripcion {
-  text-align: center;
-}
-.main .hobbies .contenedor .contenedor-hobbies .hobbie .descripcion .nombre {
-  font-weight: 700;
-  color: #3895ea;
-  margin-bottom: 10px;
-}
-.main .hobbies .contenedor .contenedor-hobbies .hobbie .descripcion .categoria {
-  font-size: 14px;
-  color: #636363;
-}
-
-@media screen and (max-width: 800px) {
-  .main .hobbies .contenedor-hobbies .hobbie {
-    width: 46%;
-  }
-}
 @media screen and (max-width: 600px) {
   .foto .foto-jarron {
     margin-top: 5rem;
@@ -12636,7 +12655,9 @@ html {
   -ms-overflow-style: scrollbar;
 }
 
-*, ::after, ::before {
+*,
+::after,
+::before {
   box-sizing: inherit;
 }
 
@@ -12645,7 +12666,8 @@ html {
   margin: 0;
 }
 
-html, body {
+html,
+body {
   font-family: "PT Sans", sans-serif;
   margin: 0;
   padding: 0;
@@ -12659,7 +12681,17 @@ p {
   padding: 0;
 }
 
-h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+h1, .h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
   font-family: "PT Sans", sans-serif;
   margin: 0;
   padding: 0;

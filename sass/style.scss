@@ -2,23 +2,24 @@
 @import "variables"; // Importa el archivo variables.scss
 @import "mixins"; // Importa el archivo mixins.scss
 @import "../node_modules/bootstrap/scss/bootstrap";
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 * {
   @include reset-box-model();
 }
 
-
-
 body {
   @include body-style; // se importa desde la estructura desde mixins
 }
 
-
 .body-hobbies {
   @include body-hobbies();
+  @include hobbies;
 }
+
+/*.main .hobbies {
+  
+}*/
 
 .contenedor {
   @include container();
@@ -30,26 +31,24 @@ body {
   }
 }
 
-.experience{
+.experience {
   @include experience-properties();
 }
 
-.degree{
+.degree {
   @include degree-properties();
 }
 
-
-.evidence{
-  @include evidence-properties
+.evidence {
+  @include evidence-properties;
 }
 
-.info-languages{
-  @include info-languages-properties
+.info-languages {
+  @include info-languages-properties;
 }
 
-
-.info-github{
-  @include info-github-properties
+.info-github {
+  @include info-github-properties;
 }
 
 /* Ahora puedes utilizar los mixins en tu código */
@@ -73,15 +72,9 @@ body {
   @include texto;
 }
 
-.main .hobbies {
-  @include hobbies;
-}
-
-
 // Utiliza los mixins según sea necesario
-@include screen-max-800; // Aplica estilos en pantalla <= 800px
-@include screen-max-600; // Aplica estilos en pantalla <= 600px
 
+@include screen-max-600; // Aplica estilos en pantalla <= 600px
 
 .foto-perfil {
   @include foto-perfil-properties; // se importa la esctura de mixins las propiedades que tomara la foto
@@ -99,7 +92,6 @@ a:visited {
   @include info-basica-properties; // se importa propiedades
 }
 
-
 .pie-pagina {
   @include pie-pagina-properties; // se importa propiedades
 }
@@ -111,15 +103,13 @@ a:visited {
 .imagenen-logo-estudios {
   @include imagenen-logo-estudios-properties;
 }
-.container{
+.container {
   @include container-properties;
 }
 
-
-.large{
- @include large-properties;
+.large {
+  @include large-properties;
 }
-
 
 #about {
   @include about-styles;
@@ -140,7 +130,6 @@ a:visited {
 #about hr {
   @include about-hr-styles;
 }
-
 
 // Aplicar los mixins a los elementos correspondientes
 #skills {
@@ -165,7 +154,6 @@ a:visited {
   }
 }
 
-
 // Aplicar los mixins a los elementos correspondientes
 #timeline {
   @include timeline-styles;
@@ -183,45 +171,37 @@ a:visited {
   }
 }
 
-
-.card{
-  @include card-properties; 
+.card {
+  @include card-properties;
 }
 
 #portfolio {
   @include portfolio-styles;
 }
 
-
-
 .titulo-mis-experiencias-profesionales {
   @include titulo-mis-experiencias-profesionales-properties;
 }
 
-
-.footer-subexperiencia{
- @include navegador-subexperiencias-properties;
+.footer-subexperiencia {
+  @include navegador-subexperiencias-properties;
 }
 
-.footerDos-experiencia{
-  @include navegador-experiencias-properties ;
+.footerDos-experiencia {
+  @include navegador-experiencias-properties;
 }
 
-
-
-.empresas{
- @include empresas-properties;
+.empresas {
+  @include empresas-properties;
 }
 
-.navebar-paginacion{
-  @include navbar-empresas-properties
+.navebar-paginacion {
+  @include navbar-empresas-properties;
 }
 
 .experiencia-texto {
   @include experiencia-texto-properties;
 }
-
-
 
 .Mis-Titulos-Obtenidos {
   @include Mis-Titulos-Obtenidos-properties;
@@ -236,123 +216,129 @@ a:visited {
 }
 
 .imagenen-freetime {
- @include imagen-freetime-properties;
+  @include imagen-freetime-properties;
 }
 
 @media (min-width: 600px) and (max-width: 768px) {
- @include properties-responsives-600-to-768;
+  @include properties-responsives-600-to-768;
 }
 
 // desde aqui inicia el codigo de testeo para el nuevo diseño pagina evidencias
 
 // Definición de variables
-$font-family: 'PT Sans', sans-serif;
+$font-family: "PT Sans", sans-serif;
 $background-color: #090f1b;
-$font-family-lato: 'Lato', sans-serif;
+$font-family-lato: "Lato", sans-serif;
 
 // Establecer estilos base
 html {
-    box-sizing: border-box;
-    -ms-overflow-style: scrollbar;
+  box-sizing: border-box;
+  -ms-overflow-style: scrollbar;
 }
 
-*, ::after, ::before {
-    box-sizing: inherit;
+*,
+::after,
+::before {
+  box-sizing: inherit;
 }
 
 * {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
 // Estilos para el cuerpo del documento
-html, body {
-    font-family: $font-family;
-    margin: 0;
-    padding: 0;
-    /*background-color: $background-color;*/
-    scroll-behavior: smooth;
+html,
+body {
+  font-family: $font-family;
+  margin: 0;
+  padding: 0;
+  /*background-color: $background-color;*/
+  scroll-behavior: smooth;
 }
 
 // Estilos para los párrafos
 p {
-    font-family: $font-family-lato;
-    margin: 0;
-    padding: 0;
+  font-family: $font-family-lato;
+  margin: 0;
+  padding: 0;
 }
 
 // Estilos para los encabezados
-h1, h2, h3, h4, h5, h6 {
-    font-family: $font-family;
-    margin: 0;
-    padding: 0;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-family;
+  margin: 0;
+  padding: 0;
 }
 
 // Estilos para el elemento con el ID "redes-repositorio github"
 #redes-repositorio {
-    text-align: center;
-    color: $background-color;
-    font-size: 20px;
-    margin: 15px auto;
+  text-align: center;
+  color: $background-color;
+  font-size: 20px;
+  margin: 15px auto;
 
-    h1 {
-        background: rgba(0, 2, 1, 0.178);
-        text-align: center;
-        justify-content: center;
-        text-transform: uppercase;
-        font-size: 55px;
-        font-weight: 700;
-        margin: 10px auto;
-    }
+  h1 {
+    background: rgba(0, 2, 1, 0.178);
+    text-align: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-size: 55px;
+    font-weight: 700;
+    margin: 10px auto;
+  }
 }
 
 // Estilos para la clase "github"
 .github {
-    border-radius: 255px;
-    letter-spacing: 25px;
-    width: 15vh;
-    background: #fff;
+  border-radius: 255px;
+  letter-spacing: 25px;
+  width: 15vh;
+  background: #fff;
 }
 
 // Estilos para la clase "typing-info" y sus elementos hijos
 .typing-info {
-    img {
-        text-align: center;
-        justify-content: center;
-        margin: auto;
-        background-color: $color-box;
-        border-radius: 10rem;
-        width: 20rem;
-        
-    }
+  img {
+    text-align: center;
+    justify-content: center;
+    margin: auto;
+    background-color: $color-box;
+    border-radius: 10rem;
+    width: 20rem;
+  }
 }
 
 // Estilos para la clase "github-info"
 .github-info {
-    text-align: center;
-    margin: 5px auto;
-    justify-content: center;
+  text-align: center;
+  margin: 5px auto;
+  justify-content: center;
 }
 
 // Estilos para la clase "info-imgs" y sus elementos hijos
 .info-imgs {
-    img {
-        text-align: left;
-        justify-content: left;
-    }
+  img {
+    text-align: left;
+    justify-content: left;
+  }
 }
 
 // Estilos para la clase "info-works"
 .info-works {
-    text-align: justify;
-    margin: 5px auto;
+  text-align: justify;
+  margin: 5px auto;
 }
 
 // Estilos para la clase "perfil"
 .perfil {
-    border-radius: 155px;
-    letter-spacing: 25px;
+  border-radius: 155px;
+  letter-spacing: 25px;
 }
 
-// inicia el estilo para la nueva version de paginas de hobbies 
-
+// inicia el estilo para la nueva version de paginas de hobbies
