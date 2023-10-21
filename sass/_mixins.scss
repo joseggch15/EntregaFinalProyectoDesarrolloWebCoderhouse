@@ -53,6 +53,52 @@
   width: auto;
   height: 100%;
   text-decoration: none;
+  /* Se reutiliza plantilla  */
+
+  .hobbie {
+    width: 50;
+    margin-bottom: 40px;
+
+    .thumb {
+      width: 100%;
+      margin-bottom: 19px;
+
+      img {
+        width: 100%;
+        vertical-align: top;
+        border-radius: 3px;
+
+        &:hover {
+          transform: scale(1.05);
+          transition: all 0.5s ease;
+        }
+      }
+    }
+
+    .descripcion {
+      text-align: center;
+
+      .nombre {
+        font-weight: 700;
+        color: #3895ea;
+        margin-bottom: 10px;
+        font-size: 1rem;
+      }
+
+      .categoria-diploma {
+        font-size: 14px;
+        color: #636363;
+      }
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    .categoria-diploma {
+      font-size: 0.5rem;
+      color: #636363;
+      margin-bottom: 70px;
+    }
+  }
 }
 
 @mixin evidence-properties {
@@ -96,9 +142,9 @@
 /* Hobbies */
 @mixin hobbies {
   background: #f2f2f2;
-  padding: 0px 0px  60px 0px;
-  
-  .foto-jarron{
+  padding: 0px 0px 60px 0px;
+
+  .foto-jarron {
     margin-top: 5rem;
   }
 
@@ -159,26 +205,23 @@
     }
   }
 
-
   @media screen and (max-width: 800px) {
     .main .hobbies .contenedor-hobbies .hobbie {
       width: 46%;
       height: auto;
-   
 
-      .hobbies{
+      .hobbies {
         display: flex;
         flex-direction: column;
-
       }
-  
+
       .nombre {
         font-weight: 700;
         color: #3895ea;
         margin-bottom: 10px;
         font-size: 1rem;
       }
-  
+
       .categoria {
         font-size: 0.5rem;
         color: #636363;
@@ -186,8 +229,6 @@
     }
   }
 }
-
-
 
 // Mixin para estilos de .foto .foto-jarron en pantalla <= 600px
 @mixin screen-max-600 {

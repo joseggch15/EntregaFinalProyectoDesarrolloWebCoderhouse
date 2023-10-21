@@ -12108,6 +12108,44 @@ body a {
   width: auto;
   height: 100%;
   text-decoration: none;
+  /* Se reutiliza plantilla  */
+}
+.degree .hobbie {
+  width: 50;
+  margin-bottom: 40px;
+}
+.degree .hobbie .thumb {
+  width: 100%;
+  margin-bottom: 19px;
+}
+.degree .hobbie .thumb img {
+  width: 100%;
+  vertical-align: top;
+  border-radius: 3px;
+}
+.degree .hobbie .thumb img:hover {
+  transform: scale(1.05);
+  transition: all 0.5s ease;
+}
+.degree .hobbie .descripcion {
+  text-align: center;
+}
+.degree .hobbie .descripcion .nombre {
+  font-weight: 700;
+  color: #3895ea;
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+.degree .hobbie .descripcion .categoria-diploma {
+  font-size: 14px;
+  color: #636363;
+}
+@media screen and (max-width: 800px) {
+  .degree .categoria-diploma {
+    font-size: 0.5rem;
+    color: #636363;
+    margin-bottom: 70px;
+  }
 }
 
 .evidence {
