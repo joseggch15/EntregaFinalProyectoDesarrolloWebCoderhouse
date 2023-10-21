@@ -43,7 +43,14 @@ body {
   @include evidence-properties
 }
 
+.info-languages{
+  @include info-languages-properties
+}
 
+
+.info-github{
+  @include info-github-properties
+}
 
 /* Ahora puedes utilizar los mixins en tu código */
 .main .contenedor {

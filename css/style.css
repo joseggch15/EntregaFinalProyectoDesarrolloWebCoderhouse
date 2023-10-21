@@ -12041,6 +12041,26 @@ body a {
   margin-bottom: 6.25rem;
 }
 
+.info-languages {
+  margin-top: 6.25rem;
+}
+@media (min-width: 375px) and (max-width: 778px) {
+  .info-languages {
+    margin-top: 2rem;
+  }
+}
+
+.info-github {
+  margin-top: 1rem;
+}
+@media (min-width: 375px) and (max-width: 778px) {
+  .info-github {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 /* Ahora puedes utilizar los mixins en tu código */
 .main .contenedor {
   overflow: visible;
@@ -12563,6 +12583,7 @@ a:visited {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  margin-top: 0;
 }
 .imagenen-freetime .freetime-actividad {
   width: 23%; /* Establece el ancho en un 25% del contenedor y resta un margen */
