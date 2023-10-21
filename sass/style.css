@@ -12226,6 +12226,7 @@ body a {
   background-image: url("../img/backgroundDegree.png");
   width: auto;
   height: 100%;
+  text-decoration: none;
 }
 
 .evidence {
